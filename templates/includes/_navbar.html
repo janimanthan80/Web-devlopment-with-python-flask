@@ -1,0 +1,23 @@
+<nav class="site-header sticky-top py-1">
+  <div class = "container">
+
+     <div class="container d-flex flex-column flex-md-row justify-content-between">
+       <ul class = 'nav navbar-nav'>
+       <a class="navber-brand" herf = "/"> MYPyApp</a>
+       <a class="py-2 d-none d-md-inline-block" href="/">Home</a>
+       <a class="py-2 d-none d-md-inline-block" href="/articles">Articles</a>
+       <a class="py-2 d-none d-md-inline-block" href="/about">About</a>
+       </ul>
+
+       <ul class = "nav navbar-nav navbar-right">
+       {% if session.logged_in %}
+       <a class="py-2 d-none d-md-inline-block" href="/dashboard">Dashboard</a>
+       <a class="py-2 d-none d-md-inline-block" href="/logout">Logout</a>
+       {% else %}
+       <a class="py-2 d-none d-md-inline-block" href="/register">Register</a>
+       <a class="py-2 d-none d-md-inline-block" href="/login">Login</a>
+       {% endif %}
+  </ul>
+ </div>
+ </div>
+</nav>
